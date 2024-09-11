@@ -1,0 +1,25 @@
+train_csv: /path/to/train.csv
+train_img_path: /path/to/train_image
+val_csv: /path/to/val.csv
+val_img_path: /path/to/val_image
+
+use_dp: False
+device: [0]
+
+log_dir: "./log/vit_base_16_exp_emb"
+checkpoint_dir: "./checkpoints/vit_base_16_exp_emb"
+
+print_freq: 20
+accum_iter: 100
+batch_size: 64
+num_workers: 8
+
+num_epochs: 100
+save_epoch: 1
+mae_pretrain_checkpoints: /path/to/pretrained_mae
+resume: null
+
+lr: 0.002
+momentum: 0.9
+weight_decay: 0.00005
+optim: "SGD"

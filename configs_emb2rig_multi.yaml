@@ -1,0 +1,28 @@
+character: L36_230_61, L36_233 #, L36_233
+use_multichar: True
+CHARACTER_NAME: ['L36_233', 'L36_230', 'L36_230_61']
+save_root: /project/qiuf/expr-capture
+# mae_emb_cartoon2,mae_dissymm_v5,mae_affectnet, mae_emb, repvit, mobilevit
+emb_backbone: mobilevit_relu
+mode: 'train'
+# DATA
+faceware_ratio: 0.1
+only_render: False
+# training
+batch_size: 16
+lr: 0.00001
+lr_D: 0.000001
+patience: 30
+save_step: 10
+# loss weight
+weight_rig: 10 #10
+weight_img: 1
+weight_mouth: 0
+weight_emb: 0.2  #100
+weight_D: 0 #0.0001
+weight_symm: 0.2
+id_embedding_dim: 16
+pretrained: ''  # 20240614-181949_210, 20240625-191424_90
+train_step_per_epoch: 500
+eval_step_per_epoch: 100
+seed: 101010

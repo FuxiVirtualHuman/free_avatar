@@ -1,0 +1,8 @@
+results
+core
+checkpoints/not_used/
+checkpoints
+*.onnx
+tmp
+data
+expr-transfer-tiangong
