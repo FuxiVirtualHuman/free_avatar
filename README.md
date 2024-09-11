@@ -2,11 +2,11 @@
 
 ![示例图片](./pics/teaser.png)
 
-### Abstract
+## Abstract
 > Video-driven 3D facial animation transfer aims to drive avatars to reproduce the expressions of actors. Existing methods have achieved remarkable results by constraining both geometric and perceptual consistency. However, geometric constraints (like those designed on facial landmarks) are insufficient to capture subtle emotions, while expression features trained on classification tasks lack fine granularity for complex emotions. To address this, we propose FreeAvatar, a robust facial animation transfer method that relies solely on our learned expression representation. Specifically, FreeAvatar consists of two main components: the expression foundation model and the facial animation transfer model. In the first component, we initially construct a facial feature space through a face reconstruction task and then optimize the expression feature space by exploring the similarities among different expressions. Benefiting from training on the amounts of unlabeled facial images and re-collected expression comparison dataset, our model adapts freely and effectively to any in-the-wild input facial images. In the facial animation transfer component, we propose a novel Expression-driven Multi-avatar Animator, which first maps expressive semantics to the facial control parameters of 3D avatars and then imposes perceptual constraints between the input and output images to maintain expression consistency. To make the entire process differentiable, we employ a trained neural renderer to translate rig parameters into corresponding images. Furthermore, unlike previous methods that require separate decoders for each avatar, we propose a dynamic identity injection module that allows for the joint training of multiple avatars within a single network. The comparisons show that our method achieves prominent performance even without introducing any geometric constraints, highlighting the robustness of our FreeAvatar.
 
 
-### Requirements
+## Requirements
 - imageio==2.28.1
 - matplotlib==3.7.5
 - numpy==1.23.5
@@ -32,7 +32,7 @@ This implementation is only tested under the device:
 We also used the MAE PyTorch/GPU implementation for pre-training our facial expression foundation model. For more dependencies, please refer to https://github.com/facebookresearch/mae.
 
 
-### Method
+## Method
 ![alt text](pics/pipeline.png)
 Our FreeAvatar includes three components:
 - Facial Feature Space Construction 
@@ -66,16 +66,16 @@ We used the ViT-B model of MAE for pre-training the facial reconstruction task. 
   ```
     The data path and training parameters can be modified in the configuration file `configs_emb2rig_multi.yaml`. To perform testing, specify pretrained and set `mode='test'`.
 
-### Citation
+## Citation
 If you use this project for your research, please consider citing:
 
-### Contact
+## Contact
 If you have any questions, please contact
 - Feng Qiu (qiufeng@corp.netease.com)
 - Wei Zhang (zhangwei05@corp.netase.com)
 - Lincheng Li (lilincheng@corp.netease.com)
 
-### Acknowledgement
+## Acknowledgement
 
 There are some functions or scripts in this implementation that are based on external sources. We thank the authors for their excellent works. Here are some great resources we benefit:
 
